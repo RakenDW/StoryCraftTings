@@ -1,7 +1,0 @@
-{
-  "entity.storycraftting.npc": "сюжетный персонаж",
-  "itemGroup.StoryCraftTing": "StoryCraft",
-  "item.storycraftting.delete_npc": "удалить нпс",
-  "item.storycraftting.restart_story": "Перезапустить сюжет",
-  "item.storycraftting.add": "создать нпс"
-}

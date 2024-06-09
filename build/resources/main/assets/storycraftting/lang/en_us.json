@@ -1,7 +1,0 @@
-{
-  "entity.storycraftting.npc": "story",
-  "itemGroup.StoryCraftTing": "StoryCraft",
-  "item.storycraftting.delete_npc": "delete npc",
-  "item.storycraftting.restart_story": "restart story",
-  "item.storycraftting.add": "create npc"
-}
