@@ -24,13 +24,11 @@ import rus.iglo.storycraft.story.action.Actions;
 import rus.iglo.storycraft.story.ap.WorldAp;
 import rus.iglo.storycraft.story.ap.playerallAp;
 import rus.iglo.storycraft.story.camera.Camera;
-import rus.iglo.storycraft.story.event.TickVen;
-import rus.iglo.storycraft.story.dialog.DialogScreen;
+import rus.iglo.storycraft.story.gui.GuiMeneg;
 import rus.iglo.storycraft.story.item.Itemes;
 import rus.iglo.storycraft.story.item.ModItems;
 import rus.iglo.storycraft.story.npc.ModEntityTypes;
-import rus.iglo.storycraft.story.npcc.NPCEntityEntity;
-import rus.iglo.storycraft.story.overlay.ScOverlay;
+import rus.iglo.storycraft.story.overlay.ScOverlayManager;
 import software.bernie.geckolib3.GeckoLib;
 
 import java.util.function.Supplier;
@@ -54,7 +52,7 @@ public class StoryCraftTing {
 
     public static Itemes items = new Itemes();
 
-    public static ScOverlay overlay = new ScOverlay();
+    public static ScOverlayManager.ScOverlay overlay = new ScOverlayManager.ScOverlay();;
 
     public StoryCraftTing() {
 
@@ -64,7 +62,7 @@ public class StoryCraftTing {
 
         ModItems.register(modEventBus);
 
-        DialogScreen.DialogMenu.REGISTRY.register(modEventBus);
+        GuiMeneg.DialogScreen.DialogMenu.REGISTRY.register(modEventBus);
 
         GeckoLib.initialize();
 
@@ -84,7 +82,7 @@ public class StoryCraftTing {
         @SubscribeEvent
         public static void clientLoad(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                MenuScreens.register(DialogScreen.DialogMenu.DIALOG.get(), DialogScreen::new);
+                MenuScreens.register(GuiMeneg.DialogScreen.DialogMenu.DIALOG.get(), GuiMeneg.DialogScreen::new);
             });
         }
     }
