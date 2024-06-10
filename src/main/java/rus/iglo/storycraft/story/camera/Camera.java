@@ -81,7 +81,7 @@ public class Camera {
             currentZ += (targetZ - currentZ) * speed;
 
             playerall.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(currentxx, currentyy, currentzz));
-            playerall.teleportTo(currentX, currentY, currentZ); // Обновляем позицию игрока
+            playerall.teleportTo(currentX, currentY, currentZ);
 
             if (Math.abs(currentX - targetX) < speed && Math.abs(currentY - targetY) < speed && Math.abs(currentZ - targetZ) < speed) {
                 stack = 0;
